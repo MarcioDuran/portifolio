@@ -209,7 +209,7 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 40px;
     position: relative;
     width: 100%; }
-    @media screen and (max-width: 480px) {
+    @media screen and (max-width : 643px ){
       #colorlib-main-nav .form-group {
         width: 100%; } }
     #colorlib-main-nav .form-group input::-webkit-input-placeholder {
@@ -260,7 +260,7 @@ h1, h2, h3, h4, h5, h6 {
     @media screen and (max-width: 768px) {
       #colorlib-main-nav .gallery {
         width: 25%; } }
-    @media screen and (max-width: 480px) {
+    @media screen and (max-width : 643px ){
       #colorlib-main-nav .gallery {
         width: 50%; } }
     #colorlib-main-nav .gallery:after {
