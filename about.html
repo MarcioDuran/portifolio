@@ -77,6 +77,35 @@
       <h2 class="heading-9">Want to get in touch?<br>Drop me a line!</h2>
       <div id="formInstructions" class="small-text"><em class="italic-text">Fields marked with an asterisk (*) are required.</em></div>
       <div class="w-form">
+        <form id="Contact-Form" name="Contact-Form" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
+          <!-- Adicione um campo oculto para proteção contra spam -->
+          <input type="hidden" name="form-name" value="Contact-Form" />
+          
+          <div class="contact-form-grid-2">
+            <div id="w-node-_0ed86fce-b327-e154-a9dd-9d5610a56b9c-684ed846">
+              <label for="First-Name" id="contact-first-name">Name *</label>
+              <input type="text" class="w-input" maxlength="256" name="First-Name" id="First-Name" required>
+            </div>
+            <div id="w-node-_0ed86fce-b327-e154-a9dd-9d5610a56ba0-684ed846">
+              <label for="Email" id="contact-email">Email Address *</label>
+              <!-- Corrija o nome do campo para "Email" e defina o tipo como "email" -->
+              <input type="email" class="w-input" maxlength="256" name="Email" id="Email" required>
+            </div>
+            <div id="w-node-_0ed86fce-b327-e154-a9dd-9d5610a56bac-684ed846">
+              <label for="Message" id="contact-message">Message</label>
+              <textarea class="textarea w-input" maxlength="5000" name="Message" id="Message"></textarea>
+            </div>
+          </div>
+          <input type="submit" value="SUBMIT" data-wait="Please wait..." class="submit-button w-button">
+        </form>
+        <div class="w-form-done">
+          <div>Thank you! Your submission has been received!</div>
+        </div>
+        <div class="w-form-fail">
+          <div>Oops! Something went wrong while submitting the form.</div>
+        </div>
+        
+        <!--
         <form id="wf-form-Contact-Form" name="wf-form-Contact-Form" method="POST" data-netlify="true" data-name="Contact Form">
           <div class="contact-form-grid-2">
             <div id="w-node-_0ed86fce-b327-e154-a9dd-9d5610a56b9c-684ed846"><label for="First-Name" id="contact-first-name">name *</label><input type="text" class="w-input" maxlength="256" name="First-Name" data-name="First Name" id="First-Name" required=""></div>
@@ -90,6 +119,7 @@
         <div class="w-form-fail">
           <div>Oops! Something went wrong while submitting the form.</div>
         </div>
+      -->
       </div>
     </div>
   </section>
