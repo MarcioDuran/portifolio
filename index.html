@@ -154,6 +154,9 @@
                 if (response.ok) {
                     formInstructions.textContent = 'Mensagem enviada com sucesso!';
                     formInstructions.style.color = 'green';
+                    
+                    // Limpar os campos do formulário
+                    form.reset();
                 } else {
                     formInstructions.textContent = 'Erro ao enviar a mensagem.';
                     formInstructions.style.color = 'red';
