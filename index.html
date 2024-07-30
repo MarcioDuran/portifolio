@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfólio em Manutenção</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
     <style>
         :root {
             --primary-color: #4A90E2;
@@ -104,6 +105,13 @@
             transform: translateY(0);
         }
 
+        .animation-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+
         @media (max-width: 768px) {
             .contact-form-grid-2 {
                 grid-template-columns: 1fr;
@@ -114,8 +122,20 @@
 <body>
     <div class="container">
         <h1 class="maintenance">Portfólio em Manutenção</h1>
+        
+        <div class="animation-container">
+            <dotlottie-player 
+                src="https://lottie.host/6d1cc986-c17f-43a5-8bfb-5ba33bcf1085/wDFHaO9sD2.json" 
+                background="transparent" 
+                speed="1" 
+                style="width: 250px; height: 250px;" 
+                loop 
+                autoplay>
+            </dotlottie-player>
+        </div>
+
         <section id="contact-form" class="contact-form-2">
-            <h2 class="heading-9">- Vamos nos conectar ?<br>Me envie uma mensagem!</h2>
+            <h2 class="heading-9">Vamos nos conectar ?<br>Me envie uma mensagem!</h2>
             <div id="formInstructions" class="small-text"><em>Campos marcados com asterisco (*) são obrigatórios.</em></div>
             <form id="wf-form-Contact-Form" name="contact" netlify-honeypot="bot-field" data-netlify="true" action="/success">
                 <div class="contact-form-grid-2">
@@ -154,8 +174,6 @@
                 if (response.ok) {
                     formInstructions.textContent = 'Mensagem enviada com sucesso!';
                     formInstructions.style.color = 'green';
-                    
-                    // Limpar os campos do formulário
                     form.reset();
                 } else {
                     formInstructions.textContent = 'Erro ao enviar a mensagem.';
@@ -165,6 +183,7 @@
             .catch(error => {
                 formInstructions.textContent = 'Erro ao enviar a mensagem.';
                 formInstructions.style.color = 'red';
+                console.error('Erro:', error);
             });
         });
     </script>
