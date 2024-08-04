@@ -8,32 +8,38 @@
     <meta name="author" content="tigmatemplate">
     <meta name="generator" content="Bootstrap">
 
-    <!-- Coloque seu CSS dentro de uma tag <style> -->
-    <style>
-        /* Garantir que a direção do texto esteja correta */
-        input[type="text"], input[type="email"], textarea {
-            direction: ltr;
-            text-align: left;
-            unicode-bidi: normal;
-        }
+    <!--ESTILO ATUAL -->
+    <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
+    
+    <!--Estilo-
+    Coloque seu CSS dentro de uma tag <style> 
+    -->
 
-        /* Outros estilos básicos para campos de formulário */
-        input[type="text"], input[type="email"], textarea {
-            padding: 10px;
-            border: 1px solid #ced4da;
-            border-radius: 4px;
-            width: 100%;
-            box-sizing: border-box;
-            font-size: 1rem;
-        }
-
-        input[type="submit"] {
-            padding: 10px 20px;
-            font-size: 1rem;
-            cursor: pointer;
-        }
-    </style>
-
+        <style>
+            /* Garantir que a direção do texto esteja correta */
+            input[type="text"], input[type="email"], textarea {
+                direction: ltr;
+                text-align: left;
+                unicode-bidi: normal;
+            }
+    
+            /* Outros estilos básicos para campos de formulário */
+            input[type="text"], input[type="email"], textarea {
+                padding: 10px;
+                border: 1px solid #ced4da;
+                border-radius: 4px;
+                width: 100%;
+                box-sizing: border-box;
+                font-size: 1rem;
+            }
+    
+            input[type="submit"] {
+                padding: 10px 20px;
+                font-size: 1rem;
+                cursor: pointer;
+            }
+        </style>
+    
     <!-- Adicione aqui os links para os arquivos CSS do Bootstrap, se necessário -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
 
@@ -167,15 +173,7 @@
                                     Services
                                 </a>
                             </li>
-                            <!--Desativa 
-                            <li class="nav-item" data-bs-dismiss="offcanvas">
-                                <a href="javascript:;" onclick="scrollToSection('#faqs')"
-                                    class="nav-link rounded-3 px-3 text-base fw-semibold leading-6 text-body-emphasis bg-body-secondary-hover">
-                                    FAQs
-                                </a>
-                            </li>
-                             FAQ-->
-
+                            
                             <li class="nav-item" data-bs-dismiss="offcanvas">
                                 <a href="javascript:;" onclick="scrollToSection('#contact')"
                                     class="nav-link rounded-3 px-3 text-base fw-semibold leading-6 text-body-emphasis bg-body-secondary-hover">
@@ -452,235 +450,7 @@
     </div>  
 
 
-    <!-- Testimonials -->
-    <div class="overflow-hidden py-7 py-sm-8 py-xl-9 bg-body-tertiary">
-        <div class="container">
-            <div class="glide glideLowGap">
-                <div class="max-w-2xl mb-5">
-                    <h2 class="m-0 text-primary-emphasis text-base leading-7 fw-semibold">
-                        Satisfied Clients Speak Out
-                    </h2>
-                    <div class="m-0 mt-2 text-body-emphasis text-4xl tracking-tight fw-bold">
-                        Real stories from real customers.
-                    </div>
-                </div>
-
-                <div class="position-lg-absolute top-0 end-0">
-                    <div class="glide__arrows" data-glide-el="controls">
-                        <button class="glide__arrow glide__arrow--left btn text-body-emphasis p-0 rounded-circle rtl-flip" data-glide-dir="<">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-arrow-left-circle" viewBox="0 0 16 16"> <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-4.5-.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5z"/> </svg>
-                        </button>
-                        <button class="glide__arrow glide__arrow--right btn text-body-emphasis p-0 rounded-circle rtl-flip" data-glide-dir=">">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-arrow-right-circle" viewBox="0 0 16 16"> <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z"/> </svg>
-                        </button>
-                    </div>
-                </div>
-
-                <div class="glide__track" data-glide-el="track">
-                    <ul class="glide__slides">
-                        <li class="glide__slide h-auto">
-                            <div class="h-100 py-5">
-                                <div class="h-100 p-4 p-xl-5 bg-body d-flex flex-column rounded-3 rounded-sm-4 rounded-xl-5 shadow-sm">
-                                    <div class="text-body-emphasis">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="currentColor" class="ms-n2 bi bi-quote rtl-flip" viewBox="0 0 16 16"> <path d="M12 12a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1h-1.388q0-.527.062-1.054.093-.558.31-.992t.559-.683q.34-.279.868-.279V3q-.868 0-1.52.372a3.3 3.3 0 0 0-1.085.992 4.9 4.9 0 0 0-.62 1.458A7.7 7.7 0 0 0 9 7.558V11a1 1 0 0 0 1 1zm-6 0a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1H4.612q0-.527.062-1.054.094-.558.31-.992.217-.434.559-.683.34-.279.868-.279V3q-.868 0-1.52.372a3.3 3.3 0 0 0-1.085.992 4.9 4.9 0 0 0-.62 1.458A7.7 7.7 0 0 0 3 7.558V11a1 1 0 0 0 1 1z"/> </svg>
-                                    </div>
-
-                                    <p class="text-body text-base leading-7 my-4">
-                                        Transformed my web presence with their stellar design and dev services—truly a cut above the rest!
-                                    </p>
-
-                                    <div class="d-flex align-items-center column-gap-3 mt-auto">
-                                        <img src="./assets/img/small-team/st1.jpg" height="40" width="40" class="img-fluid rounded-circle" alt="this is an image" loading="lazy">
-
-                                        <div class="d-flex flex-wrap align-items-center text-sm">
-                                            <div class="text-body-secondary fw-semibold">Kade Castillo</div>
-                                            <svg viewBox="0 0 2 2" width="3" height="3" aria-hidden="true" class="mx-2 text-body-secondary" fill="currentColor">
-                                                <circle cx="1" cy="1" r="1" />
-                                            </svg>
-                                            <div class="text-body-tertiary">CTO, The Wealth Inc.</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-
-                        <li class="glide__slide h-auto">
-                            <div class="h-100 py-5">
-                                <div class="h-100 p-4 p-xl-5 bg-body d-flex flex-column rounded-3 rounded-sm-4 rounded-xl-5 shadow-sm">
-                                    <div class="text-body-emphasis">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="currentColor" class="ms-n2 bi bi-quote rtl-flip" viewBox="0 0 16 16"> <path d="M12 12a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1h-1.388q0-.527.062-1.054.093-.558.31-.992t.559-.683q.34-.279.868-.279V3q-.868 0-1.52.372a3.3 3.3 0 0 0-1.085.992 4.9 4.9 0 0 0-.62 1.458A7.7 7.7 0 0 0 9 7.558V11a1 1 0 0 0 1 1zm-6 0a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1H4.612q0-.527.062-1.054.094-.558.31-.992.217-.434.559-.683.34-.279.868-.279V3q-.868 0-1.52.372a3.3 3.3 0 0 0-1.085.992 4.9 4.9 0 0 0-.62 1.458A7.7 7.7 0 0 0 3 7.558V11a1 1 0 0 0 1 1z"/> </svg>
-                                    </div>
-
-                                    <p class="text-body text-base leading-7 my-4">
-                                        Transformed my web presence with their stellar design and dev services—truly a cut above the rest!
-                                    </p>
-
-                                    <div class="d-flex align-items-center column-gap-3 mt-auto">
-                                        <img src="./assets/img/small-team/st2.jpg" height="40" width="40" class="img-fluid rounded-circle" alt="this is an image" loading="lazy">
-
-                                        <div class="d-flex flex-wrap align-items-center text-sm">
-                                            <div class="text-body-secondary fw-semibold">Kade Castillo</div>
-                                            <svg viewBox="0 0 2 2" width="3" height="3" aria-hidden="true" class="mx-2 text-body-secondary" fill="currentColor">
-                                                <circle cx="1" cy="1" r="1" />
-                                            </svg>
-                                            <div class="text-body-tertiary">CTO, The Wealth Inc.</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-
-                        <li class="glide__slide h-auto">
-                            <div class="h-100 py-5">
-                                <div class="h-100 p-4 p-xl-5 bg-body d-flex flex-column rounded-3 rounded-sm-4 rounded-xl-5 shadow-sm">
-                                    <div class="text-body-emphasis">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="currentColor" class="ms-n2 bi bi-quote rtl-flip" viewBox="0 0 16 16"> <path d="M12 12a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1h-1.388q0-.527.062-1.054.093-.558.31-.992t.559-.683q.34-.279.868-.279V3q-.868 0-1.52.372a3.3 3.3 0 0 0-1.085.992 4.9 4.9 0 0 0-.62 1.458A7.7 7.7 0 0 0 9 7.558V11a1 1 0 0 0 1 1zm-6 0a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1H4.612q0-.527.062-1.054.094-.558.31-.992.217-.434.559-.683.34-.279.868-.279V3q-.868 0-1.52.372a3.3 3.3 0 0 0-1.085.992 4.9 4.9 0 0 0-.62 1.458A7.7 7.7 0 0 0 3 7.558V11a1 1 0 0 0 1 1z"/> </svg>
-                                    </div>
-
-                                    <p class="text-body text-base leading-7 my-4">
-                                        Transformed my web presence with their stellar design and dev services—truly a cut above the rest!
-                                    </p>
-
-                                    <div class="d-flex align-items-center column-gap-3 mt-auto">
-                                        <img src="./assets/img/small-team/st3.jpg" height="40" width="40" class="img-fluid rounded-circle" alt="this is an image" loading="lazy">
-
-                                        <div class="d-flex flex-wrap align-items-center text-sm">
-                                            <div class="text-body-secondary fw-semibold">Kade Castillo</div>
-                                            <svg viewBox="0 0 2 2" width="3" height="3" aria-hidden="true" class="mx-2 text-body-secondary" fill="currentColor">
-                                                <circle cx="1" cy="1" r="1" />
-                                            </svg>
-                                            <div class="text-body-tertiary">CTO, The Wealth Inc.</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-
-                        <li class="glide__slide h-auto">
-                            <div class="h-100 py-5">
-                                <div class="h-100 p-4 p-xl-5 bg-body d-flex flex-column rounded-3 rounded-sm-4 rounded-xl-5 shadow-sm">
-                                    <div class="text-body-emphasis">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="currentColor" class="ms-n2 bi bi-quote rtl-flip" viewBox="0 0 16 16"> <path d="M12 12a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1h-1.388q0-.527.062-1.054.093-.558.31-.992t.559-.683q.34-.279.868-.279V3q-.868 0-1.52.372a3.3 3.3 0 0 0-1.085.992 4.9 4.9 0 0 0-.62 1.458A7.7 7.7 0 0 0 9 7.558V11a1 1 0 0 0 1 1zm-6 0a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1H4.612q0-.527.062-1.054.094-.558.31-.992.217-.434.559-.683.34-.279.868-.279V3q-.868 0-1.52.372a3.3 3.3 0 0 0-1.085.992 4.9 4.9 0 0 0-.62 1.458A7.7 7.7 0 0 0 3 7.558V11a1 1 0 0 0 1 1z"/> </svg>
-                                    </div>
-
-                                    <p class="text-body text-base leading-7 my-4">
-                                        Transformed my web presence with their stellar design and dev services—truly a cut above the rest!
-                                    </p>
-
-                                    <div class="d-flex align-items-center column-gap-3 mt-auto">
-                                        <img src="./assets/img/small-team/st4.jpg" height="40" width="40" class="img-fluid rounded-circle" alt="this is an image" loading="lazy">
-
-                                        <div class="d-flex flex-wrap align-items-center text-sm">
-                                            <div class="text-body-secondary fw-semibold">Kade Castillo</div>
-                                            <svg viewBox="0 0 2 2" width="3" height="3" aria-hidden="true" class="mx-2 text-body-secondary" fill="currentColor">
-                                                <circle cx="1" cy="1" r="1" />
-                                            </svg>
-                                            <div class="text-body-tertiary">CTO, The Wealth Inc.</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>                       
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-    <!-- FAQs 
-    <div id="faqs" class="overflow-hidden py-7 py-sm-8 py-xl-9">
-        <div class="container">
-            <div class="max-w-4xl mx-auto">
-                <h2 class="m-0 mb-4 text-body-emphasis tracking-tight leading-10 text-2xl fw-bold">
-                    Frequently asked questions
-                </h2>
-
-                <div class="accordion accordion-flush pt-2" id="accordionFlushExample2">
-                    <div class="accordion-item pb-4" style="border-top: var(--bs-accordion-border-width) solid var(--bs-accordion-border-color);">
-                        <h3 class="accordion-header">
-                            <button class="accordion-button align-items-start p-0 pt-4 text-body-emphasis leading-7 text-base shadow-none collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                                What is a pixel?
-                            </button>
-                        </h3>
-                        <div id="flush-collapseOne" class="accordion-collapse collapse " data-bs-parent="#accordionFlushExample2">
-                            <div class="accordion-body p-0 pe-5 mx-0 mb-0 mt-2 text-body-secondary leading-7 text-base">
-                                A pixel is the smallest unit of a digital image that displays a specific color and brightness.
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="accordion-item pb-4">
-                        <h3 class="accordion-header">
-                            <button class="accordion-button align-items-start p-0 pt-4 text-body-emphasis leading-7 text-base shadow-none collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                                What is design thinking?
-                            </button>
-                        </h3>
-                        <div id="flush-collapseTwo" class="accordion-collapse collapse " data-bs-parent="#accordionFlushExample2">
-                            <div class="accordion-body p-0 pe-5 mx-0 mb-0 mt-2 text-body-secondary leading-7 text-base">
-                                Design thinking is a human-centered approach to problem-solving that involves understanding the needs and emotions of the users, defining the problem, generating and testing ideas, and implementing solutions.
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="accordion-item pb-4">
-                        <h3 class="accordion-header">
-                            <button class="accordion-button align-items-start p-0 pt-4 text-body-emphasis leading-7 text-base shadow-none collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                                What is a QR code?
-                            </button>
-                        </h3>
-                        <div id="flush-collapseThree" class="accordion-collapse collapse " data-bs-parent="#accordionFlushExample2">
-                            <div class="accordion-body p-0 pe-5 mx-0 mb-0 mt-2 text-body-secondary leading-7 text-base">
-                                A QR code is a type of barcode that can be scanned by a smartphone or a QR reader to access information, such as a website, a text, or an image.
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="accordion-item pb-4">
-                        <h3 class="accordion-header">
-                            <button class="accordion-button align-items-start p-0 pt-4 text-body-emphasis leading-7 text-base shadow-none collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
-                                What is a wireframe?
-                            </button>
-                        </h3>
-                        <div id="flush-collapseFour" class="accordion-collapse collapse " data-bs-parent="#accordionFlushExample2">
-                            <div class="accordion-body p-0 pe-5 mx-0 mb-0 mt-2 text-body-secondary leading-7 text-base">
-                                A wireframe is a low-fidelity sketch or blueprint of a website or app that shows the layout, structure, and functionality.
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="accordion-item pb-4">
-                        <h3 class="accordion-header">
-                            <button class="accordion-button align-items-start p-0 pt-4 text-body-emphasis leading-7 text-base shadow-none collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
-                                What is a chatbot?
-                            </button>
-                        </h3>
-                        <div id="flush-collapseFive" class="accordion-collapse collapse " data-bs-parent="#accordionFlushExample2">
-                            <div class="accordion-body p-0 pe-5 mx-0 mb-0 mt-2 text-body-secondary leading-7 text-base">
-                                A chatbot is a software program that simulates a conversation with a human user using natural language processing and artificial intelligence.
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="accordion-item pb-4">
-                        <h3 class="accordion-header">
-                            <button class="accordion-button align-items-start p-0 pt-4 text-body-emphasis leading-7 text-base shadow-none collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseSix">
-                                What is a podcast?
-                            </button>
-                        </h3>
-                        <div id="flush-collapseSix" class="accordion-collapse collapse " data-bs-parent="#accordionFlushExample2">
-                            <div class="accordion-body p-0 pe-5 mx-0 mb-0 mt-2 text-body-secondary leading-7 text-base">
-                                A podcast is a digital audio file that can be downloaded or streamed online and listened to on various devices. Podcasts usually have a theme, topic, or genre.
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    fim FAQ-->
-    <!--Contato ChatGPT 4.O-->
-    
+   
     <!--Inicio Contact-->
 <div id="contact" class="overflow-hidden py-7 py-sm-8 py-xl-9 bg-light">
     <div class="pb-9 pt-7">
