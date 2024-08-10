@@ -4,7 +4,7 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
-    <div id="google_translate_element" class="boxTradutor"></div>
+    <div id="google_translate_element" style="display:none;"></div>
 
     <a href="javascript:trocarIdioma('es')">
         <img alt="Traduzir para espanhol" src="images/es.png" class="bandeira">
@@ -18,17 +18,6 @@
     <script type="text/javascript">
         var comboGoogleTradutor = null;
 
-        function ocultarBarraTradutor() {
-            const bannerFrame = document.querySelector('.goog-te-banner-frame');
-            if (bannerFrame) {
-                bannerFrame.style.display = 'none';
-            }
-            const skipDiv = document.querySelector('.skiptranslate');
-            if (skipDiv) {
-                skipDiv.style.display = 'none';
-            }
-        }
-
         function googleTranslateElementInit() {
             new google.translate.TranslateElement({
                 pageLanguage: 'pt',
@@ -36,35 +25,13 @@
                 layout: google.translate.TranslateElement.InlineLayout.SIMPLE
             }, 'google_translate_element');
 
-            comboGoogleTradutor = document.getElementById("google_translate_element").querySelector(".goog-te-combo");
-
-            ocultarBarraTradutor();
-
-            const observer = new MutationObserver(function (mutations) {
-                mutations.forEach(function (mutation) {
-                    if (mutation.addedNodes.length) {
-                        ocultarBarraTradutor();
-                    }
-                });
-            });
-
-            observer.observe(document.body, { childList: true, subtree: true });
-        }
-
-        function changeEvent(el) {
-            if (el.fireEvent) {
-                el.fireEvent('onchange');
-            } else {
-                var evObj = document.createEvent("HTMLEvents");
-                evObj.initEvent("change", false, true);
-                el.dispatchEvent(evObj);
-            }
+            comboGoogleTradutor = document.querySelector("#google_translate_element select.goog-te-combo");
         }
 
         function trocarIdioma(sigla) {
             if (comboGoogleTradutor) {
                 comboGoogleTradutor.value = sigla;
-                changeEvent(comboGoogleTradutor);
+                comboGoogleTradutor.dispatchEvent(new Event('change'));
             }
         }
     </script>

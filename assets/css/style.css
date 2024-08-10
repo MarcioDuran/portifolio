@@ -163,21 +163,9 @@ body {
     left: 20px;
 }
 
-/* Oculta o elemento do Google Translate */
+/* Oculta a interface do Google Translate, mas mantém a funcionalidade */
 #google_translate_element {
     display: none;
-}
-
-/* Oculta a barra superior do Google Translate */
-.goog-te-banner-frame, .skiptranslate {
-    display: none !important;
-    visibility: hidden !important;
-}
-
-/* Corrige o posicionamento do corpo da página */
-body {
-    position: static !important;
-    top: 0 !important;
 }
 
 /* Estilo para as bandeiras */
