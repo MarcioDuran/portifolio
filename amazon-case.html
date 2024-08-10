@@ -56,7 +56,7 @@
     <script src="js/custom.js"></script>
 
     <!-- Google Translate Script -->
-    <script type="text/javascript">
+   <script type="text/javascript">
         function googleTranslateElementInit() {
             new google.translate.TranslateElement({
                 pageLanguage: 'pt',
@@ -64,6 +64,22 @@
                 layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
                 autoDisplay: false
             }, 'google_translate_element');
+
+            // Função para remover a barra superior do Google Translate
+            function removeGoogleTranslateBar() {
+                var googleTranslateBar = document.querySelector('.goog-te-banner-frame');
+                if (googleTranslateBar) {
+                    googleTranslateBar.style.display = 'none';
+                }
+                document.body.style.top = '0px';
+            }
+
+            // Remove a barra após um curto delay para garantir que o widget foi carregado
+            setTimeout(removeGoogleTranslateBar, 100);
+
+            // Observa mudanças no corpo do documento para remover a barra se ela reaparecer
+            var observer = new MutationObserver(removeGoogleTranslateBar);
+            observer.observe(document.body, { childList: true, subtree: true });
         }
     </script>
     <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
