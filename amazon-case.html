@@ -1,21 +1,61 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 <head>
-  <title>Página Principal</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Principal</title>
+    <!-- Adicione aqui seus arquivos CSS -->
 </head>
 <body>
+    <!-- MENU -->
+    <nav class="navbar custom-navbar navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon icon-bar"></span>
+                    <span class="icon icon-bar"></span>
+                    <span class="icon icon-bar"></span>
+                </button>
+                <!-- Adicione aqui o logotipo ou nome do site -->
+            </div>
+            <!-- Adicione aqui os itens do menu -->
+        </div>
+    </nav>
 
-  <h1>Bem-vindo à Página Principal!</h1>
+    <!--TRADUTOR SITE GSTRANSLATOR.IO-->
+    <div id="google_translate_element"></div>
 
-  <h2>Estudo de Caso da Amazon</h2>
-  <ul>
-    <li><a href="amazon-case-study-1.html">Parte 1: Visão Geral do Projeto</a></li>
-    <li><a href="amazon-case-study-2.html">Parte 2: Processo de Descoberta</a></li>
-    <li><a href="amazon-case-study-3.html">Parte 3: Definição do Problema</a></li>
-    <li><a href="amazon-case-study-4.html">Parte 4: Ideação</a></li>
-    <li><a href="amazon-case-study-5.html">Parte 5: Prototipagem</a></li>
-    <li><a href="amazon-case-study-6.html">Parte 6: Testes e Iteração</a></li>
-  </ul>
+    <main>
+        <h1>Bem-vindo à Página Principal!</h1>
+        <h2>Estudo de Caso da Amazon</h2>
+        <ul>
+            <li><a href="amazon-case-study-1.html">Parte 1: Visão Geral do Projeto</a></li>
+            <li><a href="amazon-case-study-2.html">Parte 2: Processo de Descoberta</a></li>
+            <li><a href="amazon-case-study-3.html">Parte 3: Definição do Problema</a></li>
+            <li><a href="amazon-case-study-4.html">Parte 4: Ideação</a></li>
+            <li><a href="amazon-case-study-5.html">Parte 5: Prototipagem</a></li>
+            <li><a href="amazon-case-study-6.html">Parte 6: Testes e Iteração</a></li>
+        </ul>
+    </main>
 
+    <!-- SCRIPTS -->
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.stellar.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/smoothscroll.js"></script>
+    <script src="js/custom.js"></script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'pt',
+                includedLanguages: 'en,fr,pt,de',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
+        }
+    </script>
 </body>
 </html>
