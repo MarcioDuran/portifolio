@@ -163,3 +163,25 @@ body {
     left: 20px;
 }
 
+/* Oculta o elemento do Google Translate */
+#google_translate_element {
+    display: none;
+}
+
+/* Oculta a barra superior do Google Translate */
+.goog-te-banner-frame {
+    display: none !important;
+}
+
+/* Corrige o posicionamento do corpo da página */
+body {
+    position: static !important;
+    top: 0 !important;
+}
+
+/* Estilo para as bandeiras */
+img.bandeira {
+    width: 24px;
+    height: 24px;
+}
+Melhorias
