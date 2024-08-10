@@ -169,8 +169,9 @@ body {
 }
 
 /* Oculta a barra superior do Google Translate */
-.goog-te-banner-frame {
+.goog-te-banner-frame, .skiptranslate {
     display: none !important;
+    visibility: hidden !important;
 }
 
 /* Corrige o posicionamento do corpo da página */
@@ -184,4 +185,3 @@ img.bandeira {
     width: 24px;
     height: 24px;
 }
-Melhorias
