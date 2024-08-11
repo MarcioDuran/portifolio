@@ -163,13 +163,62 @@ body {
     left: 20px;
 }
 
-/* Oculta a interface do Google Translate, mas mantém a funcionalidade */
-#google_translate_element {
-    display: none;
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
 }
 
-/* Estilo para as bandeiras */
-img.bandeira {
-    width: 24px;
-    height: 24px;
+.bandeira {
+    width: 30px;
+    height: 20px;
+    margin-right: 10px;
+    cursor: pointer;
+    border: 1px solid #ddd;
+    transition: transform 0.2s ease-in-out;
+}
+
+.bandeira:hover {
+    transform: scale(1.1);
+}
+
+p {
+    font-size: 18px;
+    color: #333;
+    margin-top: 20px;
+}
+
+#google_translate_element {
+    margin-bottom: 20px;
+}
+
+/* Estilos para o widget do Google Translate (quando visível) */
+.goog-te-gadget {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+.goog-te-gadget-simple {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 5px;
+    border-radius: 4px;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    .bandeira {
+        width: 25px;
+        height: 17px;
+    }
+
+    p {
+        font-size: 16px;
+    }
 }
