@@ -1,49 +1,63 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html>
 <head>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <style type="text/css">
+    #google_translate_element {
+        display: none;
+    }
+    /*
+    .goog-te-banner-frame {
+        display: none !important;
+    }
+    body {
+        position: static !important;
+        top: 0 !important;
+    }
+    */
+    </style>
 </head>
 <body>
-    <!-- Elemento do Google Translate, invisível visualmente -->
-    <div id="google_translate_element" style="height: 0; overflow: hidden;"></div>
+    <div id="google_translate_element" class="boxTradutor"></div>
 
-    <!-- Imagens para troca de idioma -->
-    <a href="javascript:trocarIdioma('es')">
-        <img alt="Traduzir para espanhol" src="images/es.png" class="bandeira">
-    </a>
-    <a href="javascript:trocarIdioma('en')">
-        <img alt="Traduzir para inglês" src="images/en.png" class="bandeira">
-    </a>
+    <a href="javascript:trocarIdioma('es')"><img alt="espanhol" src="images/es.png"></a>
+    <a href="javascript:trocarIdioma('en')"><img alt="ingles" src="images/en.png"></a>
 
     <p>Olá, mundo!</p>
 
-    <!-- SCRIPTS -->
-    <script src="js/jquery.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.stellar.min.js"></script>
-    <script src="js/wow.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/jquery.magnific-popup.min.js"></script>
-    <script src="js/smoothscroll.js"></script>
-    <script src="js/custom.js"></script>
-    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+    <!-- O Javascript deve vir depois -->
 
     <script type="text/javascript">
-        function googleTranslateElementInit() {
-            new google.translate.TranslateElement({
-                pageLanguage: 'pt', // Língua original da página
-                includedLanguages: 'en,es', // Línguas disponíveis
-                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
-            }, 'google_translate_element');
-        }
+    var comboGoogleTradutor = null; //Varialvel global
 
-        function trocarIdioma(sigla) {
-            var comboGoogleTradutor = document.querySelector("#google_translate_element select.goog-te-combo");
-            if (comboGoogleTradutor) {
-                comboGoogleTradutor.value = sigla;
-                comboGoogleTradutor.dispatchEvent(new Event('change'));
-            }
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement({
+            pageLanguage: 'pt',
+            includedLanguages: 'en,es',
+            layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL
+        }, 'google_translate_element');
+
+        comboGoogleTradutor = document.getElementById("google_translate_element").querySelector(".goog-te-combo");
+    }
+
+    function changeEvent(el) {
+        if (el.fireEvent) {
+            el.fireEvent('onchange');
+        } else {
+            var evObj = document.createEvent("HTMLEvents");
+
+            evObj.initEvent("change", false, true);
+            el.dispatchEvent(evObj);
         }
+    }
+
+    function trocarIdioma(sigla) {
+        if (comboGoogleTradutor) {
+            comboGoogleTradutor.value = sigla;
+            changeEvent(comboGoogleTradutor);//Dispara a troca
+        }
+    }
     </script>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>
