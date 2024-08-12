@@ -171,28 +171,30 @@ body {
     background-color: #f4f4f4;
 }
 
-.bandeira {
-    width: 30px;
-    height: 20px;
-    margin-right: 10px;
-    cursor: pointer;
-    border: 1px solid #ddd;
-    transition: transform 0.2s ease-in-out;
-}
+/* Estilo do Email */
+ /* Garantir que a direção do texto esteja correta */
+            input[type="text"], input[type="email"], textarea {
+                direction: ltr;
+                text-align: left;
+                unicode-bidi: normal;
+            }
+    
+            /* Outros estilos básicos para campos de formulário */
+            input[type="text"], input[type="email"], textarea {
+                padding: 10px;
+                border: 1px solid #ced4da;
+                border-radius: 4px;
+                width: 100%;
+                box-sizing: border-box;
+                font-size: 1rem;
+            }
+    
+            input[type="submit"] {
+                padding: 10px 20px;
+                font-size: 1rem;
+                cursor: pointer;
+            }
 
-.bandeira:hover {
-    transform: scale(1.1);
-}
-
-p {
-    font-size: 18px;
-    color: #333;
-    margin-top: 20px;
-}
-
-#google_translate_element {
-    margin-bottom: 20px;
-}
 
 /* Estilos para o widget do Google Translate (quando visível) */
 #google_translate_element {
